@@ -1,6 +1,9 @@
 # acp-verification-engine
 ACP Verification Engine is the core module of ACP (Agent Credit Protocol), responsible for verifying whether an AI agent has actually achieved a real-world outcome.
-ACP Verification Engine — Proving What AI Agents Actually Achieve
+
+AI systems can silently change outcomes.
+
+ACP verifies what actually happened.
 
 ## 🚨 Problem
 
@@ -9,6 +12,35 @@ AI agents can execute tasks, but there is no reliable way to verify:
 - Did the task actually succeed?
 - Was the outcome real or simulated?
 - Can we trust this agent again?
+
+  EVEN worse , when Type "we can make success"
+
+After sending, it changed to:
+
+"we haven't made success"
+
+I didn’t edit it.
+
+The system did.
+
+---
+
+This is the real problem with AI systems:
+
+Not that they fail.
+
+But that they silently change outcomes.
+
+---
+
+If we cannot prove what actually happened,
+we cannot trust any agent.
+
+---
+
+We don’t need smarter AI.
+
+We need verifiable outcomes.
 
 Current systems rely on:
 - Tokens
