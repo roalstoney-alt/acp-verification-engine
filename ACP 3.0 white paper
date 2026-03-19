@@ -1,0 +1,251 @@
+Agent Credit Protocol: From Assigned Trust to Verified Outcomes
+
+0. Abstract
+Artificial intelligence agents are rapidly gaining execution capabilities, yet the fundamental problem of trust remains unresolved.
+Current systems rely on assigned credit—tokens, reputations, or identities—which fail to reflect real-world performance.
+This paper introduces Agent Credit Protocol (ACP) 3.0, a system that:
+* Verifies agent outcomes in real environments
+* Converts verified actions into measurable credit
+* Enables trust to emerge from proven behavior, not assumption
+
+1. Introduction
+The rise of AI agents has transformed execution:
+
+Tasks → Automated  
+Decisions → Assisted  
+Actions → Scalable
+
+However, a critical gap remains:
+There is no reliable system to verify what an AI agent actually achieves.
+
+1.1 The Trust Problem
+Today, trust is derived from:
+* Token ownership
+* Reputation scores
+* Claimed capabilities
+These mechanisms suffer from a shared flaw:
+
+They do not verify outcomes.
+
+
+1.2 Consequence
+* Agents can appear successful without delivering results
+* Systems cannot distinguish real performance from simulated success
+* Trust becomes fragile, non-transferable, and manipulable
+
+2. Problem Statement
+We formalize the core issue:
+
+Execution ≠ Verified Outcome
+
+
+2.1 Three Structural Failures
+(1) Token ≠ Capability
+Ownership of assets does not guarantee task completion.
+
+(2) Execution ≠ Success
+An agent may execute steps without achieving the intended result.
+
+(3) Reputation ≠ Proof
+Historical claims cannot guarantee reproducibility.
+
+2.2 Missing Layer
+All current systems lack:
+
+Outcome Verification Infrastructure
+
+
+3. Core Thesis
+Trust must be derived from verifiable outcomes, not assigned signals.
+
+4. ACP 2.0 Overview
+ACP introduces a closed-loop system:
+
+Execution → Observation → Verification → Credit
+
+
+4.1 Definition
+
+Agent Credit = Accumulated Verified Outcomes over Time
+
+
+5. System Architecture
+
+5.1 Layered Model
+
+Task Layer
+   ↓
+Execution Layer (Agent)
+   ↓
+Observation Layer
+   ↓
+Verification Engine
+   ↓
+Credit System
+   ↓
+Market Layer
+
+
+6. Execution Layer
+Agents perform real-world tasks:
+* Web automation (e.g., publishing content)
+* API interactions
+* On-chain transactions
+
+7. Observation Layer
+Captures objective evidence of execution:
+
+- DOM state
+- Screenshots
+- Logs
+- URLs
+- Transaction receipts
+
+
+8. Verification Engine（核心）
+The Verification Engine determines whether outcomes are real.
+
+8.1 Multi-Layer Verification
+Layer 1: Deterministic
+Rule-based checks:
+
+Expected state change detected
+
+
+Layer 2: Semantic (AI-based)
+LLM/VLM evaluates:
+* UI changes
+* semantic correctness
+* contextual success
+
+Layer 3: Consensus
+Multiple verifiers independently confirm:
+
+2/3 agreement → verified
+
+
+8.2 Verification Function
+
+Verification = f(state_before, state_after)
+
+
+8.3 Security Model
+To prevent manipulation:
+* Multi-source validation
+* Randomized checks
+* Delayed verification
+* Cross-environment replay
+
+9. Credit System
+
+9.1 Credit Definition
+
+Credit(agent) = Σ Verified Outcomes × Weight × Decay
+
+
+9.2 Dimensions
+1. Success Rate
+2. Task Difficulty
+3. Environment Robustness
+
+9.3 Time Decay
+
+Credit(t) = Credit × e^(-λt)
+
+
+10. Market Layer
+
+10.1 Task Marketplace
+Agents compete based on credit.
+
+10.2 Credit-Based Allocation
+Higher credit → higher priority → higher pricing power
+
+10.3 Delegation Networks
+Agents can subcontract tasks:
+
+High-credit agents → orchestrators  
+Low-credit agents → executors
+
+
+10.4 Credit Lending (Emerging)
+Credit becomes:
+
+A form of productive capacity
+
+
+11. Relationship with Blockchain
+ACP does not replace blockchain.
+Instead:
+
+Blockchain = Trust Anchor
+
+Used for:
+* immutable logs
+* credit proofs
+* cross-system interoperability
+
+12. Key Innovation
+ACP introduces:
+
+Proof of Outcome (PoO)
+
+
+Compared to Existing Models
+Model	Basis	Limitation
+Token	Ownership	Not capability
+Reputation	History	Not verifiable
+AI Agent	Execution	Not accountable
+ACP	Verified Outcome	✅ measurable
+13. Why Now
+This system is now possible due to convergence of:
+
+Execution (Agents)
++ Observation (Digital environments)
++ Intelligence (LLMs)
+
+
+14. MVP Path
+Minimal system includes:
+1. Agent execution (e.g., publish task)
+2. Evidence capture
+3. Verification engine
+4. Credit update
+5. Query interface
+
+15. Use Cases
+* AI automation platforms
+* decentralized task networks
+* content distribution systems
+* financial execution agents
+
+16. Risks & Challenges
+
+16.1 Verification Attack
+Fake environments or replay attacks
+
+16.2 Overfitting Verification Rules
+Agents may game deterministic checks
+
+16.3 Cost of Verification
+Balancing accuracy vs efficiency
+
+17. Vision
+
+Every AI agent will have a verifiable credit history.
+
+
+
+Trust will not be assigned.
+
+It will be proven.
+
+
+18. Conclusion
+AI has solved execution.
+ACP solves accountability.
+
+
+The future of intelligent systems
+is not defined by how well they act,
+but by how well their outcomes can be proven.
