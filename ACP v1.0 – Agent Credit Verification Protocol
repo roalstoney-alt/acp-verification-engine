@@ -1,0 +1,183 @@
+
+ACP v1.0 FULL SPEC
+Agent Credit Verification Protocol
+
+1. Definition
+ACP (Agent Credit Verification Protocol) defines how AI agent outcomes are observed, verified, and scored based on real-world evidence.
+
+Core Principle:
+Execution ≠ Outcome
+
+Only verified outcomes are considered valid.
+
+---
+
+2. Protocol Scope
+ACP standardizes:
+- Outcome verification
+- Evidence structure
+- Credit scoring
+- Output format
+
+---
+
+3. Protocol Flow
+Execution → Observation → Verification → Credit
+
+---
+
+4. Observation Layer
+Captures evidence:
+- DOM state
+- URL
+- Screenshots
+- Logs
+- External signals
+
+---
+
+5. Verification Model
+
+Verification = f(state_before, state_after)
+
+Multi-layer verification:
+1. Deterministic (rule-based)
+2. Semantic (AI-based)
+3. Consensus (multi-verifier)
+
+Output:
+- verified
+- unverified
+- failed
+
+---
+
+6. ACP Score
+
+ACP Score = f(
+  Verification,
+  Consistency,
+  Robustness,
+  Freshness
+)
+
+Range: 0.00 – 1.00
+
+Grades:
+AAA (0.9–1.0)
+AA (0.7–0.9)
+A (0.5–0.7)
+B (0.3–0.5)
+Unreliable (<0.3)
+
+---
+
+7. Output Standard
+
+{
+  "acp_verified": true,
+  "acp_score": 0.87,
+  "acp_grade": "AA",
+  "verification": {
+    "status": "verified",
+    "confidence": 0.87
+  }
+}
+
+States:
+- ACP Verified
+- ACP Failed
+- ACP Unverified
+
+---
+
+8. Credit System
+
+Credit(agent) =
+Σ (Verified Outcomes × Weight × Decay)
+
+Includes:
+- Success rate
+- Task difficulty
+- Environment robustness
+
+Time decay:
+Credit × e^(-λt)
+
+---
+
+9. Security Model
+
+ACP must prevent:
+- Fake success signals
+- Replay attacks
+- UI manipulation
+
+Methods:
+- Multi-source validation
+- Randomized checks
+- Cross-environment verification
+
+---
+
+10. Market Layer
+
+ACP enables:
+- Task marketplaces
+- Credit-based ranking
+- Delegation networks
+
+High credit agents gain priority and pricing power.
+
+---
+
+11. Relationship with Blockchain
+
+Blockchain serves as:
+- Immutable log layer
+- Proof storage
+- Interoperability layer
+
+ACP remains chain-agnostic.
+
+---
+
+12. Core Innovation
+
+Proof of Outcome (PoO)
+
+ACP replaces:
+- Token-based trust
+- Reputation-based trust
+
+With:
+Verified outcome-based trust
+
+---
+
+13. Use Cases
+
+- AI automation
+- Content publishing
+- API execution
+- Enterprise workflows
+
+---
+
+14. Roadmap
+
+Phase 1: Verification Engine + ACP Score
+Phase 2: SDK Adoption
+Phase 3: Platform Integration
+Phase 4: Standardization
+
+---
+
+15. Vision
+
+AI agents will not be trusted because they claim success.
+
+They will be trusted because their outcomes are verified.
+
+Trust is not assigned.
+It is proven.
