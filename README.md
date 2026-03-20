@@ -1,93 +1,203 @@
-# acp-verification-engine
-ACP Verification Engine is the core module of ACP (Agent Credit Protocol), responsible for verifying whether an AI agent has actually achieved a real-world outcome.
+# ACP (Agent Credit Protocol)
 
-AI systems can silently change outcomes.
+Verification and Credit Layer for AI Agents
 
-ACP verifies what actually happened.
+🚨 One Line
 
-## 🚨 Problem
+Execution ≠ Outcome
 
-AI agents can execute tasks, but there is no reliable way to verify:
+ACP defines how agent outcomes are verified and scored.
 
-- Did the task actually succeed?
-- Was the outcome real or simulated?
-- Can we trust this agent again?
 
-  EVEN worse , when Type "we can make success"
+📌 What is ACP?
 
-After sending, it changed to:
+ACP (Agent Credit Protocol) is a protocol for verifying and scoring AI agent outcomes.
 
-"we haven't made success"
+Instead of trusting execution signals like "success", ACP verifies what actually happened.
 
-I didn’t edit it.
+It introduces:
 
-The system did.
+- Outcome verification
+- Evidence-based validation
+- A universal reliability score (ACP Score)
 
----
+ACP transforms agent execution into provable outcomes.
 
-This is the real problem with AI systems:
 
-Not that they fail.
+⚠️ The Problem
 
-But that they silently change outcomes.
+Today, most systems rely on:
 
----
+- logs
+- status codes
+- UI feedback
 
-If we cannot prove what actually happened,
-we cannot trust any agent.
+These signals do not guarantee real-world results.
 
----
+Agents can return "success" even when:
 
-We don’t need smarter AI.
+- content is not published
+- actions do not take effect
+- no state change occurs
 
-We need verifiable outcomes.
+Execution ≠ Outcome
 
-Current systems rely on:
-- Tokens
-- Reputation
-- Identity
 
-None of them verify outcomes.
+🚀 The Solution
 
----
+ACP introduces a new primitive:
 
-## ✅ Solution
+Verification
 
-ACP Verification Engine introduces a closed-loop system:
+Instead of asking:
+"Did the system run?"
+
+We ask:
+"Did the outcome actually happen?"
+
+
+🔄 Protocol Flow
 
 Execution → Observation → Verification → Credit
 
----
 
-## 🔥 Core Concept
+📊 ACP Score
 
-Agent Credit = Accumulated Verified Outcomes
+ACP Score represents the reliability of an agent based on verified outcomes.
 
----
+ACP Score = f(
+  Verification,
+  Consistency,
+  Robustness,
+  Freshness
+)
 
-## ⚙️ System Architecture
+Range: 0.00 – 1.00
 
-- Agent Runner (Playwright)
-- Observation Layer (HTML, Screenshot)
-- Verification Engine (Rule + AI)
-- Credit Engine
-- API Layer
 
----
+🏷️ Output Standard
 
-## 🧪 Demo
+ACP replaces "success" with:
 
-This repo includes a working demo:
+- ACP Verified
+- ACP Failed
+- ACP Unverified
 
-```bash
-python demo/run_demo.py
 
-What happens:
+Example
 
-1.Agent executes a task
+{
+  "acp_verified": false,
+  "acp_score": 0.23,
+  "acp_grade": "B",
+  "reason": "no outcome detected"
+}
 
-2.System captures evidence
 
-3.Verification engine evaluates success
+🔍 Verification Model
 
-4.Credit is updated
+Verification = f(state_before, state_after)
+
+
+Evidence Sources
+
+- DOM state
+- URL
+- Visual proof (screenshots)
+- External signals
+
+
+Multi-layer Verification
+
+1. Deterministic (rule-based)
+2. Semantic (AI-based)
+3. Consensus (multi-verifier)
+
+
+🧱 Architecture
+
+AI Agent
+   ↓
+Execution Layer
+   ↓
+Observation Layer
+   ↓
+ACP Verification
+   ↓
+ACP Score
+
+
+🧠 Core Innovation
+
+Proof of Outcome (PoO)
+
+ACP replaces:
+
+- Token-based trust
+- Reputation-based trust
+
+With:
+
+Verified outcome-based trust
+
+
+🌐 Why This Matters
+
+AI agents are moving from assistants → actors.
+
+They can execute real-world tasks.
+
+But without verification:
+
+Trust breaks at scale.
+
+
+📦 Implementation
+
+ACP is a protocol.
+
+It can be implemented via:
+
+- ACP Verification Engine
+- ACP SDK
+- ACP API
+
+
+🧩 Example (Python)
+
+from acp_sdk import verify
+
+result = await verify(task)
+
+print(result.acp_verified)
+print(result.acp_score)
+
+
+🔮 Vision
+
+Agents will not be trusted because they say they succeeded.
+
+They will be trusted because their outcomes are verified.
+
+Trust is not assigned.
+It is proven.
+
+
+🤝 Adoption
+
+ACP is open for experimentation.
+
+We are looking for:
+
+- Agent frameworks
+- Automation tools
+- AI products
+
+to explore outcome verification together.
+
+
+📌 Status
+
+ACP v1.0 (Protocol Draft)
+
+Early adoption stage
